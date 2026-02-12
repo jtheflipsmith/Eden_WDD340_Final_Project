@@ -3,7 +3,7 @@ const recipe = document.getElementById('recipe-section');
 
 async function getRecipe() {
     try {
-        const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+        const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php/images/media/meals/llcbn01574260722.jpg/medium');
         if (!response.ok) {
             throw new Error('Failed to fetch recipe');
         }

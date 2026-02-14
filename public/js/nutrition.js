@@ -41,4 +41,11 @@ async function getNutrition() {
         nutritionInfo.innerHTML = '<p>Sorry, we couldn\'t fetch the nutrition information at this time. Please try again later.</p>';
     }   
 }
-getNutrition(); 
+
+
+const loadRecipe = document.getElementById('recipe-button');
+loadRecipe.addEventListener('click', () => {
+    getNutrition();
+});
+
+getNutrition();

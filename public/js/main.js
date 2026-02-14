@@ -1,3 +1,8 @@
+import loadHeaderFooter from './utils.mjs';
+
+// Load header and footer
+loadHeaderFooter();
+
 //Call to API
 const recipe = document.getElementById('recipe-section');
 

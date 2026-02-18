@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ----------- HEADER ----------- */
+/* hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+/* Hamburger bars */
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/*toggle hamburger animation */
+.hamburger-open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-open div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    header ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    body.nav-open header ul {
+        display: flex;
+    }
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+header li {
+    display: inline;
+    background: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ----------- MAIN CONTENT ----------- */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ----------- RECIPE CARDS ----------- */
+
+#recipe-button, #save-recipe {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nutrition-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background: lightgray;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgb(139, 139, 139);
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* ----------- FORM ----------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ----------- DASHBOARD ----------- */
+#dashboard-content {
+    max-width: 800px;
+    margin: 20px auto;
+    background: lightgray;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(139, 139, 139);
+    gap: 2rem;
+}
+
+/* ----------- FOOTER ----------- */
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

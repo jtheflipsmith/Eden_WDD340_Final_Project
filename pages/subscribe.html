@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscription</title>
-    <script src="/pages/subscribe.js" type="module" defer></script>
+    <link rel="stylesheet" href="/css/project.css">
+    <script src="/js/subscribe.js" type="module" defer></script>
 </head>
 <body>
     <header id="main-header"></header>
-    <section>
+    <section id="subscribe">
         <form action="">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
             <button type="submit" id="subscribe-button">Subscribe</button>
+
         </form>
     </section>
 

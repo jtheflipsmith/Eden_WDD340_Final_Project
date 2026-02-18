@@ -24,3 +24,13 @@ export default async function loadHeaderFooter(){
   renderWithTemplate(headerTemplate, headerElement);
   renderWithTemplate(footerTemplate, footerElement);
 }
+
+// hambutton for header
+export function setupHamburgerMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+    hamburger.classList.toggle('hamburger-open');
+  });
+}

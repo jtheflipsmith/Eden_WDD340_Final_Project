@@ -6,57 +6,6 @@ body {
 
 
 /* ----------- HEADER ----------- */
-/* hamburger menu styles */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-/* Hamburger bars */
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-
-/*toggle hamburger animation */
-.hamburger-open div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-open div:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-open div:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Show hamburger on small screens */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    header ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: #333;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    
-    body.nav-open header ul {
-        display: flex;
-    }
-}
 
 header {
     background: #333;
@@ -87,6 +36,15 @@ header li {
 img {
     width: 100%;
     height: auto;
+    animation:fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 }
 
 /* ----------- RECIPE CARDS ----------- */

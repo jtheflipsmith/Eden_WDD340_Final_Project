@@ -15,22 +15,25 @@ async function loadTemplate(path) {
 //dynamically load header and footer
 //This function is imported and called in each page's JavaScript file to load the header and footer templates into the respective elements on the page.
 export default async function loadHeaderFooter(){
+
   const headerTemplate = await loadTemplate('/partials/header.html');
   const footerTemplate = await loadTemplate('/partials/footer.html');
 
   const headerElement = document.getElementById('main-header')
   const footerElement = document.getElementById('main-footer')
 
-  renderWithTemplate(headerTemplate, headerElement);
-  renderWithTemplate(footerTemplate, footerElement);
+ await renderWithTemplate(headerTemplate, headerElement);
+ await renderWithTemplate(footerTemplate, footerElement);
 }
 
-// hambutton for header
-export function setupHamburgerMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav');
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('nav-open');
-    hamburger.classList.toggle('hamburger-open');
+      // Hamburger menu functionality
+  const hamButton = document.getElementById('ham-button');
+  const navElement = document.getElementById('nav-links');
+
+  // create an event listener for the button that will open and close menu links
+  export function setupHamburgerMenu() {
+    hamButton.addEventListener('click', () => { // 'click' targets the action of clicking
+      navElement.classList.toggle("open");
+      hamButton.classList.toggle("open");
   });
 }
